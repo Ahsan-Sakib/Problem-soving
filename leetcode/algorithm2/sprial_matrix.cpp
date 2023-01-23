@@ -48,7 +48,12 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
     int nc = matrix[0].size();  if (nc == 0) return res;
     
     vector<int> nSteps{nc, nr-1};
-    
+          cout<<"n steps array"<<endl;
+    for(int i=0;i<nSteps.size();i++){
+      cout<<nSteps[i]<<" ";
+    }
+
+cout<<"done "<<endl;
     int iDir = 0;   // index of direction.
     int ir = 0, ic = -1;    // initial position
     while (nSteps[iDir%2]) {
@@ -66,7 +71,7 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
 int main(){
     vector<vector<int>> matrixs = {{1,2,3},{4,5,6},{7,8,9}};
 
-    vector<int> result = sprialOrder(matrixs);
+    vector<int> result = spiralOrder(matrixs);
 
    for(int i=0;i<result.size();i++){
     cout<<result[i]<<" ";
